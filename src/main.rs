@@ -1,3 +1,5 @@
+use std::io;
+
 fn main() {
     // variables
 let mut name = "Pascal";
@@ -14,6 +16,13 @@ let mut name = "Pascal";
 let first_name = "Tommy".to_string();
     say_first_name(&first_name);
     say_first_name(&first_name);
+
+    println!("please enter your name:");
+
+        let mut input_name = String::new();
+    io::stdin().read_line(&mut input_name);
+    println!("Your name is {}", input_name);
+
 
 }
 
